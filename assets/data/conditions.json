@@ -1,0 +1,1107 @@
+[
+  {
+    "id": "common-cold",
+    "name": "Common Cold",
+    "keywords": [
+      "body pain",
+      "chest pain",
+      "chills",
+      "cold",
+      "congestion",
+      "continuous sneezing",
+      "cough",
+      "fatigue",
+      "headache",
+      "high fever",
+      "loss of smell",
+      "malaise",
+      "muscle pain",
+      "phlegm",
+      "redness of eyes",
+      "runny nose",
+      "sinus pressure",
+      "swelled lymph nodes",
+      "throat irritation",
+      "tiredness"
+    ],
+    "summary": "This may indicate Common Cold. This is a viral infection affecting the upper respiratory system.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "Mild, self-limiting viral illness that typically resolves with rest and fluids."
+  },
+  {
+    "id": "fever",
+    "name": "Fever",
+    "keywords": [
+      "fever"
+    ],
+    "summary": "Rest and drink plenty of fluids. Medication isn't needed. Call the doctor if the fever is accompanied by a severe headache, stiff neck, shortness of breath, or other unusual signs or symptoms. If you're uncomfortable, take paracetamol.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "Isolated low-grade fever is usually manageable at home; escalate if it's high, persistent, or paired with red-flag symptoms."
+  },
+  {
+    "id": "allergies",
+    "name": "Allergies",
+    "keywords": [
+      "itchy eyes",
+      "runny nose",
+      "skin rash",
+      "sneezing"
+    ],
+    "summary": "This may indicate allergies. Allergies are immune system reactions to allergens in the environment.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "Classic allergic symptoms respond well to over-the-counter treatment and allergen avoidance."
+  },
+  {
+    "id": "asthma",
+    "name": "Asthma",
+    "keywords": [
+      "chest tightness",
+      "cough",
+      "shortness of breath",
+      "wheezing"
+    ],
+    "summary": "This may indicate asthma. Asthma is a chronic respiratory condition that can cause breathing difficulties.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Active breathing difficulty warrants same-day evaluation to rule out a worsening exacerbation."
+  },
+  {
+    "id": "bronchial-asthma",
+    "name": "Bronchial Asthma",
+    "keywords": [
+      "breathlessness",
+      "cough",
+      "family history",
+      "fatigue",
+      "high fever",
+      "mucoid sputum"
+    ],
+    "summary": "This may indicate Bronchial Asthma. Bronchial asthma is a chronic respiratory condition with symptoms like fatigue, cough, high fever, breathlessness, a family history of asthma, and mucoid sputum production.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Breathlessness with fever and cough should be assessed same-day, not watched at home."
+  },
+  {
+    "id": "rheumatoid-arthritis",
+    "name": "Rheumatoid Arthritis",
+    "keywords": [
+      "fatigue",
+      "joint pain",
+      "joint stiffness",
+      "swelling"
+    ],
+    "summary": "This may indicate Rheumatoid Arthritis. It's an autoimmune disease that affects the joints.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "A chronic autoimmune pattern that needs specialist workup, but isn't time-critical."
+  },
+  {
+    "id": "arthritis",
+    "name": "Arthritis",
+    "keywords": [
+      "movement stiffness",
+      "muscle weakness",
+      "painful walking",
+      "stiff neck",
+      "swelling joints"
+    ],
+    "summary": "This may indicate Arthritis. This is a condition that affects the joints.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Joint symptoms without acute red flags are appropriate for a scheduled primary care visit."
+  },
+  {
+    "id": "hiv-aids",
+    "name": "HIV/AIDS",
+    "keywords": [
+      "fatigue",
+      "night sweats",
+      "recurrent infections",
+      "weight loss"
+    ],
+    "summary": "This may indicate a risk of HIV/AIDS. It's a viral infection that affects the immune system.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Testing and specialist referral are needed, but this isn't an emergency presentation."
+  },
+  {
+    "id": "ovarian-cancer",
+    "name": "Ovarian Cancer",
+    "keywords": [
+      "abdominal pain",
+      "bloating",
+      "fatigue",
+      "urinary frequency"
+    ],
+    "summary": "This may indicate Ovarian Cancer. It's a type of cancer that affects the ovaries.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Concerning but non-acute symptoms should prompt a timely workup rather than an ER visit."
+  },
+  {
+    "id": "ovarian-cyst",
+    "name": "Ovarian Cyst",
+    "keywords": [
+      "bloating",
+      "irregular menstruation",
+      "pelvic pain"
+    ],
+    "summary": "This may indicate an Ovarian Cyst. It's a fluid-filled sac that can form on or within the ovaries.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Pelvic symptoms without acute severe pain are appropriate for a scheduled evaluation."
+  },
+  {
+    "id": "pneumothorax",
+    "name": "Pneumothorax",
+    "keywords": [
+      "chest tightness",
+      "shortness of breath",
+      "sudden chest pain"
+    ],
+    "summary": "This may indicate Pneumothorax. It's a condition where air leaks into the space between the lung and the chest wall.",
+    "careLevel": "emergency",
+    "careLevelLabel": "Emergency care (call 911 / go to ER)",
+    "rationale": "Sudden chest pain with shortness of breath can indicate a collapsed lung \u2014 treat as life-threatening."
+  },
+  {
+    "id": "gout",
+    "name": "Gout",
+    "keywords": [
+      "redness",
+      "severe joint pain",
+      "sudden and severe joint pain",
+      "swelling"
+    ],
+    "summary": "This may indicate Gout. It's a type of arthritis caused by the buildup of uric acid crystals in the joints.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Sudden, severe joint pain and swelling benefits from same-day treatment to control the flare."
+  },
+  {
+    "id": "chronic-fatigue-syndrome",
+    "name": "Chronic Fatigue Syndrome",
+    "keywords": [
+      "cognitive difficulties",
+      "muscle pain",
+      "persistent fatigue"
+    ],
+    "summary": "This may indicate Chronic Fatigue Syndrome (CFS). It's a complex disorder characterized by long-term, unexplained fatigue.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "A diagnosis of exclusion best handled through a scheduled primary care workup."
+  },
+  {
+    "id": "hypertension",
+    "name": "Hypertension",
+    "keywords": [
+      "chest pain",
+      "dizziness",
+      "headache",
+      "high blood pressure"
+    ],
+    "summary": "This may indicate Hypertension (High Blood Pressure). It's a common condition where the force of blood against the artery walls is too high.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Chronic blood pressure management belongs in primary care unless paired with acute chest pain or severe headache."
+  },
+  {
+    "id": "type-2-diabetes",
+    "name": "Type 2 Diabetes",
+    "keywords": [
+      "blurred vision",
+      "excessive thirst",
+      "fatigue",
+      "frequent urination"
+    ],
+    "summary": "This may indicate Type 2 Diabetes. It's a chronic condition that affects how your body processes glucose (sugar).",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "New or worsening symptoms need lab work and a management plan, not an ER visit."
+  },
+  {
+    "id": "diabetes",
+    "name": "Diabetes",
+    "keywords": [
+      "blurred and distorted vision",
+      "excessive hunger",
+      "fatigue",
+      "increased appetite",
+      "irregular sugar level",
+      "lethargy",
+      "obesity",
+      "polyuria",
+      "restlessness",
+      "weight loss"
+    ],
+    "summary": "This may indicate Diabetes. Diabetes is a metabolic disorder characterized by symptoms like fatigue, weight loss, restlessness, lethargy, irregular sugar levels, blurred and distorted vision, obesity, excessive hunger, increased appetite, and polyuria (excessive urination).",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Metabolic symptoms should be worked up and managed longitudinally in primary care."
+  },
+  {
+    "id": "osteoarthritis",
+    "name": "Osteoarthritis",
+    "keywords": [
+      "hip joint pain",
+      "joint pain",
+      "knee pain",
+      "neck pain",
+      "painful walking",
+      "reduced range of motion",
+      "stiffness",
+      "swelling joints"
+    ],
+    "summary": "This may indicate Osteoarthritis. It's a degenerative joint disease that can cause pain and stiffness in the joints.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Degenerative joint pain is a scheduled-care problem, not an urgent one."
+  },
+  {
+    "id": "migraine",
+    "name": "Migraine",
+    "keywords": [
+      "nausea",
+      "sensitivity to light and sound",
+      "severe headache"
+    ],
+    "summary": "This may indicate a Migraine. It's a neurological condition characterized by intense, throbbing headaches.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Recurrent migraine with typical features is manageable via primary care unless it's a sudden 'worst headache of life'."
+  },
+  {
+    "id": "gerd-gastroesophageal-reflux-disease",
+    "name": "GERD (Gastroesophageal Reflux Disease)",
+    "keywords": [
+      "acidity",
+      "chest pain",
+      "cough",
+      "heartburn",
+      "stomach pain",
+      "ulcers on tongue",
+      "vomiting"
+    ],
+    "summary": "This may indicate GERD (Gastroesophageal Reflux Disease). This is a digestive disorder.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Chronic reflux symptoms are appropriate for a scheduled visit to rule out complications."
+  },
+  {
+    "id": "urinary-tract-infection-uti",
+    "name": "Urinary Tract Infection (UTI)",
+    "keywords": [
+      "abdominal pain",
+      "cloudy urine",
+      "frequent urination",
+      "painful urination"
+    ],
+    "summary": "This may indicate a Urinary Tract Infection (UTI). It's a bacterial infection that affects the urinary system.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Uncomplicated UTI symptoms are a common telehealth or same-week primary care visit."
+  },
+  {
+    "id": "depression",
+    "name": "Depression",
+    "keywords": [
+      "changes in sleep patterns",
+      "fatigue",
+      "loss of interest",
+      "no sleep",
+      "persistent sadness",
+      "sadness"
+    ],
+    "summary": "This may indicate Depression. It's a mood disorder characterized by persistent feelings of sadness and a loss of interest in activities.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Mood symptoms warrant a mental health referral; escalate immediately only with safety concerns."
+  },
+  {
+    "id": "anxiety",
+    "name": "Anxiety",
+    "keywords": [
+      "excessive worry",
+      "muscle tension",
+      "palpitations",
+      "restlessness"
+    ],
+    "summary": "This may indicate Anxiety. It's a common mental health condition characterized by excessive worry and heightened stress.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Anxiety symptoms are best managed through a scheduled mental health evaluation."
+  },
+  {
+    "id": "copd",
+    "name": "COPD",
+    "keywords": [
+      "chest tightness",
+      "chronic cough",
+      "shortness of breath",
+      "wheezing"
+    ],
+    "summary": "This may indicate Chronic Obstructive Pulmonary Disease (COPD). It's a progressive lung disease that can cause breathing difficulties.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Breathing difficulty in a chronic lung condition should be assessed same-day for an exacerbation."
+  },
+  {
+    "id": "allergy",
+    "name": "Allergy",
+    "keywords": [
+      "chills",
+      "continuous sneezing",
+      "shivering",
+      "watering from eyes"
+    ],
+    "summary": "This may indicate Allergy. Allergy is a hypersensitivity disorder of the immune system. Common symptoms include continuous sneezing, shivering, chills, and watering from the eyes.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "Classic allergic symptoms respond well to over-the-counter treatment and allergen avoidance."
+  },
+  {
+    "id": "chronic-cholestasis",
+    "name": "Chronic Cholestasis",
+    "keywords": [
+      "abdominal pain",
+      "itching",
+      "loss of appetite",
+      "nausea",
+      "vomiting",
+      "yellowing of eyes",
+      "yellowish skin"
+    ],
+    "summary": "This may indicate Chronic Cholestasis. This is a condition affecting the liver and bile ducts.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Yellowing skin with vomiting points to a liver problem that needs prompt in-person evaluation."
+  },
+  {
+    "id": "drug-reaction",
+    "name": "Drug Reaction",
+    "keywords": [
+      "burning micturition",
+      "itching",
+      "skin rash",
+      "spotting urination",
+      "stomach pain"
+    ],
+    "summary": "This may indicate Drug Reaction Drug reactions can manifest with symptoms like itching, skin rash, stomach pain, burning micturition, and spotting urination.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "A suspected adverse drug reaction should be evaluated the same day in case it progresses."
+  },
+  {
+    "id": "peptic-ulcer-disease",
+    "name": "Peptic ulcer disease",
+    "keywords": [
+      "abdominal pain",
+      "indigestion",
+      "internal itching",
+      "loss of appetite",
+      "passage of gases",
+      "vomiting"
+    ],
+    "summary": "This may indicate Peptic ulcer disease. Symptoms of peptic ulcer disease may include vomiting, loss of appetite, abdominal pain, passage of gases, internal itching, and indigestion.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Abdominal pain with vomiting carries a risk of bleeding and should be seen promptly."
+  },
+  {
+    "id": "aids",
+    "name": "AIDS",
+    "keywords": [
+      "extra marital contacts",
+      "high fever",
+      "muscle wasting",
+      "patches in throat"
+    ],
+    "summary": "This may indicate AIDS (Acquired Immunodeficiency Syndrome). AIDS may present with symptoms such as muscle wasting, patches in the throat, high fever, and a history of extra-marital contacts.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Requires specialist management; route to primary care for testing and referral."
+  },
+  {
+    "id": "gastroenteritis",
+    "name": "Gastroenteritis",
+    "keywords": [
+      "dehydration",
+      "diarrhoea",
+      "sunken eyes",
+      "vomiting"
+    ],
+    "summary": "This may indicate Gastroenteritis. Gastroenteritis is an inflammation of the stomach and intestines, often causing symptoms such as vomiting, sunken eyes, dehydration, and diarrhea.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Signs of dehydration (sunken eyes, persistent vomiting) need same-day assessment for fluids."
+  },
+  {
+    "id": "cervical-spondylosis",
+    "name": "Cervical Spondylosis",
+    "keywords": [
+      "back pain",
+      "dizziness",
+      "loss of balance",
+      "neck pain",
+      "weakness in limbs"
+    ],
+    "summary": "This may indicate Cervical Spondylosis. This is a condition affecting the neck and spine, leading to symptoms like neck pain and weakness in limbs.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Chronic neck and spine symptoms are appropriate for a scheduled visit and imaging."
+  },
+  {
+    "id": "paralysis-brain-hemorrhage",
+    "name": "Paralysis (brain hemorrhage)",
+    "keywords": [
+      "altered sensorium",
+      "headache",
+      "vomiting",
+      "weakness of one body side"
+    ],
+    "summary": "This may indicate Paralysis due to Brain Hemorrhage. Brain hemorrhage may manifest with symptoms like vomiting, headache, weakness on one side of the body, and altered sensorium.",
+    "careLevel": "emergency",
+    "careLevelLabel": "Emergency care (call 911 / go to ER)",
+    "rationale": "One-sided weakness with altered consciousness are stroke warning signs \u2014 call emergency services immediately."
+  },
+  {
+    "id": "jaundice",
+    "name": "Jaundice",
+    "keywords": [
+      "abdominal pain",
+      "dark or brown color urine",
+      "dark urine",
+      "fatigue",
+      "high fever",
+      "itching",
+      "pale stools",
+      "vomiting",
+      "weight loss",
+      "yellow color inside mouth",
+      "yellowish skin"
+    ],
+    "summary": "This may indicate Jaundice. Jaundice is a disease characterized by yellowing of the skin and eyes. It can be caused by various factors such as liver problems or infections. Here are four points to cure Jaundice:",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Yellowing skin with systemic symptoms needs same-day liver function evaluation."
+  },
+  {
+    "id": "malaria",
+    "name": "Malaria",
+    "keywords": [
+      "chills",
+      "diarrhoea",
+      "headache",
+      "high fever",
+      "muscle pain",
+      "nausea",
+      "sweating",
+      "vomiting"
+    ],
+    "summary": "This may indicate Malaria. Malaria is a mosquito-borne disease that can cause high fever and other symptoms. Here are four points to cure Malaria:",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "High fever with systemic symptoms in a mosquito-borne illness needs prompt testing and treatment."
+  },
+  {
+    "id": "chicken-pox",
+    "name": "Chicken pox",
+    "keywords": [
+      "fatigue",
+      "headache",
+      "high fever",
+      "itching",
+      "lethargy",
+      "loss of appetite",
+      "malaise",
+      "mild fever",
+      "red spots over body",
+      "skin rash",
+      "swelled lymph nodes"
+    ],
+    "summary": "This may indicate Chicken pox. Chicken pox is a highly contagious viral infection that causes an itchy rash and flu-like symptoms. Here are four points to cure Chicken pox:",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "A self-limiting, highly contagious viral illness managed at home with supportive care."
+  },
+  {
+    "id": "dengue",
+    "name": "Dengue",
+    "keywords": [
+      "back pain",
+      "chills",
+      "fatigue",
+      "headache",
+      "high fever",
+      "joint pain",
+      "loss of appetite",
+      "malaise",
+      "muscle pain",
+      "nausea",
+      "pain behind the eyes",
+      "skin rash",
+      "vomiting"
+    ],
+    "summary": "This may indicate Dengue. Dengue is a mosquito-borne viral infection that can cause severe flu-like symptoms. Here are four points to cure Dengue:",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Mosquito-borne illness with bleeding risk should be monitored and tested promptly."
+  },
+  {
+    "id": "typhoid",
+    "name": "Typhoid",
+    "keywords": [
+      "abdominal pain",
+      "belly pain",
+      "chills",
+      "constipation",
+      "diarrhoea",
+      "fatigue",
+      "high fever",
+      "nausea",
+      "toxic look",
+      "toxic look typhos",
+      "vomiting"
+    ],
+    "summary": "This may indicate Typhoid. Typhoid is a bacterial infection that can cause high fever and gastrointestinal symptoms. Here are four points to cure Typhoid:",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Bacterial infection with high fever needs prompt testing and antibiotic treatment."
+  },
+  {
+    "id": "hepatitis-a",
+    "name": "Hepatitis A",
+    "keywords": [
+      "abdominal pain",
+      "dark urine",
+      "diarrhoea",
+      "joint pain",
+      "loss of appetite",
+      "mild fever",
+      "muscle pain",
+      "nausea",
+      "vomiting",
+      "yellowing of eyes",
+      "yellowish skin"
+    ],
+    "summary": "This may indicate Hepatitis A. Hepatitis A is a viral infection that affects the liver and can cause jaundice. Here are four points to cure Hepatitis A:",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Typically self-resolving; a scheduled visit confirms diagnosis and monitors liver function."
+  },
+  {
+    "id": "hepatitis-b",
+    "name": "Hepatitis B",
+    "keywords": [
+      "abdominal pain",
+      "dark urine",
+      "fatigue",
+      "itching",
+      "lethargy",
+      "loss of appetite",
+      "malaise",
+      "receiving blood transfusion",
+      "receiving unsterile injections",
+      "yellow urine",
+      "yellowing of eyes",
+      "yellowish skin"
+    ],
+    "summary": "This may indicate Hepatitis B. Hepatitis B is a viral infection that affects the liver and can lead to chronic liver disease. Here are four points to cure Hepatitis B:",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Needs specialist follow-up for chronic management, not an urgent same-day visit."
+  },
+  {
+    "id": "hepatitis-c",
+    "name": "Hepatitis C",
+    "keywords": [
+      "abdominal pain",
+      "dark urine",
+      "fatigue",
+      "jaundice"
+    ],
+    "summary": "This may indicate Hepatitis C. It's a viral infection that affects the liver.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Needs specialist follow-up for chronic management, not an urgent same-day visit."
+  },
+  {
+    "id": "hepatitis-d",
+    "name": "Hepatitis D",
+    "keywords": [
+      "abdominal pain",
+      "dark urine",
+      "fatigue",
+      "joint pain",
+      "loss of appetite",
+      "nausea",
+      "vomiting",
+      "yellowing of eyes",
+      "yellowish skin"
+    ],
+    "summary": "This may indicate Hepatitis D. Hepatitis D is a viral infection that affects the liver and can worsen the symptoms of Hepatitis B. Here are four points to cure Hepatitis D:",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Needs specialist follow-up for chronic management, not an urgent same-day visit."
+  },
+  {
+    "id": "hepatitis-e",
+    "name": "Hepatitis E",
+    "keywords": [
+      "abdominal pain",
+      "coma",
+      "dark urine",
+      "fatigue",
+      "high fever",
+      "joint pain",
+      "loss of appetite",
+      "nausea",
+      "stomach bleeding",
+      "vomiting",
+      "yellowing of eyes",
+      "yellowish skin"
+    ],
+    "summary": "This may indicate Hepatitis E. Hepatitis E is a viral infection that affects the liver and can cause severe symptoms. Here are four points to cure Hepatitis E:",
+    "careLevel": "emergency",
+    "careLevelLabel": "Emergency care (call 911 / go to ER)",
+    "rationale": "Confusion or coma alongside liver symptoms is a red flag for acute liver failure."
+  },
+  {
+    "id": "alcoholic-hepatitis",
+    "name": "Alcoholic hepatitis",
+    "keywords": [
+      "abdominal pain",
+      "distention of abdomen",
+      "fluid overload",
+      "history of alcohol consumption",
+      "swelling of stomach",
+      "vomiting",
+      "yellowish skin"
+    ],
+    "summary": "This may indicate Alcoholic hepatitis. This is a disease caused by excessive alcohol consumption.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Abdominal swelling and fluid overload need prompt evaluation of liver function."
+  },
+  {
+    "id": "tuberculosis",
+    "name": "Tuberculosis",
+    "keywords": [
+      "blood in sputum",
+      "breathlessness",
+      "chest pain",
+      "chills",
+      "cough",
+      "fatigue",
+      "high fever",
+      "loss of appetite",
+      "malaise",
+      "mild fever",
+      "phlegm",
+      "shortness of breath",
+      "sweating",
+      "swelled lymph nodes",
+      "vomiting",
+      "weight loss",
+      "yellowing of eyes"
+    ],
+    "summary": "This may indicate Tuberculosis. This is a bacterial infection that affects the lungs.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Blood in sputum with weight loss and fever needs prompt testing, not a watch-and-wait approach."
+  },
+  {
+    "id": "pneumonia",
+    "name": "Pneumonia",
+    "keywords": [
+      "breathlessness",
+      "chest pain",
+      "chills",
+      "cough",
+      "fast heart rate",
+      "fatigue",
+      "high fever",
+      "malaise",
+      "rusty sputum",
+      "sweating"
+    ],
+    "summary": "This may indicate Pneumonia. This is a bacterial or viral infection of the lungs.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Fever with breathlessness and chest pain needs same-day evaluation, with escalation if breathing worsens."
+  },
+  {
+    "id": "dimorphic-hemmorhoids-piles",
+    "name": "Dimorphic hemmorhoids(piles)",
+    "keywords": [
+      "bloody stool",
+      "constipation",
+      "irritation in anus",
+      "pain during bowel movements",
+      "pain in anal region"
+    ],
+    "summary": "This may indicate Dimorphic hemmorhoids(piles). This is a condition affecting the rectal area.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Bloody stool should be confirmed by a clinician even though the underlying cause is usually benign."
+  },
+  {
+    "id": "hypothyroidism",
+    "name": "Hypothyroidism",
+    "keywords": [
+      "abnormal menstruation",
+      "brittle nails",
+      "chills",
+      "cold hands and feets",
+      "depression",
+      "dizziness",
+      "enlarged thyroid",
+      "fatigue",
+      "irritability",
+      "lethargy",
+      "mood swings",
+      "puffy face and eyes",
+      "swollen extremeties",
+      "weight gain"
+    ],
+    "summary": "This may indicate Hypothyroidism. This is a condition where the thyroid gland does not produce enough thyroid hormones.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Thyroid symptoms are diagnosed and managed through routine lab work in primary care."
+  },
+  {
+    "id": "hyperthyroidism",
+    "name": "Hyperthyroidism",
+    "keywords": [
+      "abnormal menstruation",
+      "diarrhoea",
+      "excessive hunger",
+      "fast heart rate",
+      "fatigue",
+      "irritability",
+      "mood swings",
+      "muscle weakness",
+      "restlessness",
+      "sweating",
+      "weight loss"
+    ],
+    "summary": "This may indicate Hyperthyroidism. This is a condition where the thyroid gland produces too much thyroid hormone.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Thyroid symptoms are diagnosed and managed through routine lab work in primary care."
+  },
+  {
+    "id": "hypoglycemia",
+    "name": "Hypoglycemia",
+    "keywords": [
+      "anxiety",
+      "blurred and distorted vision",
+      "drying and tingling lips",
+      "excessive hunger",
+      "fatigue",
+      "headache",
+      "irritability",
+      "nausea",
+      "palpitations",
+      "slurred speech",
+      "sweating",
+      "vomiting"
+    ],
+    "summary": "This may indicate Hypoglycemia. This is a condition characterized by low blood sugar levels.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "Confusion or slurred speech from low blood sugar needs prompt treatment and follow-up."
+  },
+  {
+    "id": "acne",
+    "name": "Acne",
+    "keywords": [
+      "blackheads",
+      "pimples",
+      "pus filled pimples",
+      "scarring",
+      "skin rash"
+    ],
+    "summary": "This may indicate Acne. This is a common skin condition characterized by pimples and skin inflammation.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "A cosmetic and mild dermatologic issue well-suited to self-care or an elective dermatology visit."
+  },
+  {
+    "id": "psoriasis",
+    "name": "Psoriasis",
+    "keywords": [
+      "inflammatory nails",
+      "itchy skin",
+      "joint pain",
+      "nail psoriasis",
+      "plaque psoriasis",
+      "silver like dusting",
+      "skin pain",
+      "skin peeling",
+      "skin rash",
+      "small dents in nails"
+    ],
+    "summary": "This may indicate Psoriasis. This is a chronic skin condition with various symptoms.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "A chronic skin condition best managed with a dermatology referral, not urgent care."
+  },
+  {
+    "id": "impetigo",
+    "name": "Impetigo",
+    "keywords": [
+      "blister",
+      "high fever",
+      "red sore around nose",
+      "skin rash",
+      "yellow crust ooze"
+    ],
+    "summary": "This may indicate Impetigo. This is a highly contagious skin infection.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "A contagious but non-emergent skin infection that needs antibiotics within a day or two."
+  },
+  {
+    "id": "fungal-infection",
+    "name": "Fungal Infection",
+    "keywords": [
+      "dischromic patches",
+      "itching",
+      "nodal skin eruptions",
+      "skin rash"
+    ],
+    "summary": "This may indicate a Fungal Infection. This can affect the skin and cause various symptoms.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "Localized fungal skin infections typically respond to over-the-counter antifungal treatment."
+  },
+  {
+    "id": "heart-attack",
+    "name": "Heart Attack",
+    "keywords": [
+      "breathlessness",
+      "chest pain",
+      "cold sweat",
+      "heartburn",
+      "indigestion",
+      "lightheadedness",
+      "shortness of breath",
+      "sweating",
+      "vomiting"
+    ],
+    "summary": "This may indicate a heart attack. A heart attack is a serious medical emergency.",
+    "careLevel": "emergency",
+    "careLevelLabel": "Emergency care (call 911 / go to ER)",
+    "rationale": "Chest pain with shortness of breath and cold sweat is a cardiac emergency \u2014 call 911 immediately."
+  },
+  {
+    "id": "varicose-veins",
+    "name": "Varicose Veins",
+    "keywords": [
+      "bruising",
+      "cramps",
+      "fatigue",
+      "obesity",
+      "prominent veins on calf",
+      "swollen blood vessels",
+      "swollen legs"
+    ],
+    "summary": "This may indicate Varicose Veins. Varicose veins are swollen and twisted veins that can be painful.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "A cosmetic and circulatory issue managed with conservative measures like compression and elevation."
+  },
+  {
+    "id": "vertigo",
+    "name": "Vertigo",
+    "keywords": [
+      "headache",
+      "loss of balance",
+      "nausea",
+      "spinning movements",
+      "unsteadiness",
+      "vomiting"
+    ],
+    "summary": "This may indicate (Vertigo) Paroxysmal Positional Vertigo. It is a type of vertigo characterized by sudden spinning sensations.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Recurrent positional vertigo without other neurological signs is appropriate for a scheduled ENT/neurology referral."
+  },
+  {
+    "id": "dizziness",
+    "name": "Dizziness",
+    "keywords": [
+      "dizziness",
+      "ear pain",
+      "loss of balance",
+      "nausea",
+      "spinning movements",
+      "unsteadiness",
+      "visual disturbances",
+      "vomiting"
+    ],
+    "summary": "This may indicate Dizziness. This is a symptom that can have various underlying causes.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Dizziness without other acute red flags should be evaluated on a routine basis."
+  },
+  {
+    "id": "anemia",
+    "name": "Anemia",
+    "keywords": [
+      "brittle nails",
+      "cold hands and feets",
+      "dizziness",
+      "fast heartbeat",
+      "fatigue",
+      "headache",
+      "irregular menstrual period",
+      "pale skin",
+      "poor concentration",
+      "shortness of breath",
+      "weakness"
+    ],
+    "summary": "This may indicate Anemia. This is a condition characterized by a shortage of red blood cells or insufficient hemoglobin to carry oxygen to the body's tissues.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Fatigue and pale skin point to a lab-driven diagnosis best handled in primary care."
+  },
+  {
+    "id": "eczema",
+    "name": "Eczema",
+    "keywords": [
+      "itchy and inflamed skin",
+      "itchy skin",
+      "rash",
+      "redness"
+    ],
+    "summary": "This may indicate Eczema (Atopic Dermatitis). It's a skin condition characterized by itchy and inflamed patches of skin.",
+    "careLevel": "self_care",
+    "careLevelLabel": "Self-care / monitor at home",
+    "rationale": "A common, manageable skin condition that responds to moisturizing and OTC treatment."
+  },
+  {
+    "id": "lupus",
+    "name": "Lupus",
+    "keywords": [
+      "fatigue",
+      "fever",
+      "joint pain",
+      "skin rash",
+      "stiffness",
+      "swelling"
+    ],
+    "summary": "This may indicate Lupus (Systemic Lupus Erythematosus). It's an autoimmune disease that can affect various parts of the body.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "A chronic autoimmune condition that requires specialist workup rather than urgent evaluation."
+  },
+  {
+    "id": "celiac-disease",
+    "name": "Celiac Disease",
+    "keywords": [
+      "diarrhea",
+      "digestive discomfort",
+      "skin rash",
+      "skin rash dermatitis herpetiformis",
+      "weight loss"
+    ],
+    "summary": "This may indicate Celiac Disease. It's an autoimmune disorder triggered by the consumption of gluten.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Digestive symptoms tied to diet are diagnosed and managed through primary care and dietary guidance."
+  },
+  {
+    "id": "fibromyalgia",
+    "name": "Fibromyalgia",
+    "keywords": [
+      "cognitive difficulties",
+      "fatigue",
+      "sleep",
+      "sleep disturbances",
+      "widespread pain"
+    ],
+    "summary": "This may indicate Fibromyalgia. It's a chronic pain condition that can affect muscles and soft tissues.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "A chronic pain syndrome diagnosed through a structured primary care workup."
+  },
+  {
+    "id": "atrial-fibrillation",
+    "name": "Atrial Fibrillation",
+    "keywords": [
+      "dizziness",
+      "fatigue",
+      "irregular heartbeat",
+      "palpitations"
+    ],
+    "summary": "This may indicate Atrial Fibrillation (AFib). It's an irregular heart rhythm that can lead to various cardiovascular issues.",
+    "careLevel": "urgent_care",
+    "careLevelLabel": "Urgent care (same day)",
+    "rationale": "An irregular heartbeat carries stroke risk and should be evaluated promptly."
+  },
+  {
+    "id": "pancreatitis",
+    "name": "Pancreatitis",
+    "keywords": [
+      "abdominal pain",
+      "fever",
+      "nausea",
+      "rapid heart rate",
+      "severe abdominal pain",
+      "vomiting"
+    ],
+    "summary": "This may indicate Pancreatitis. It's an inflammation of the pancreas that can cause digestive problems.",
+    "careLevel": "emergency",
+    "careLevelLabel": "Emergency care (call 911 / go to ER)",
+    "rationale": "Severe abdominal pain with fever and a rapid heart rate needs immediate emergency evaluation."
+  },
+  {
+    "id": "chronic-kidney-disease",
+    "name": "Chronic Kidney Disease",
+    "keywords": [
+      "changes in urine output",
+      "fatigue",
+      "swelling in legs and ankles"
+    ],
+    "summary": "This may indicate Chronic Kidney Disease (CKD). It's a progressive condition that affects kidney function.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Kidney function changes are tracked and managed through routine primary care labs."
+  },
+  {
+    "id": "ibs",
+    "name": "IBS",
+    "keywords": [
+      "abdominal pain",
+      "bloating",
+      "constipation",
+      "diarrhea"
+    ],
+    "summary": "This may indicate Irritable Bowel Syndrome (IBS). It's a common gastrointestinal disorder characterized by digestive discomfort.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "A functional digestive disorder managed through a scheduled gastroenterology evaluation."
+  },
+  {
+    "id": "multiple-sclerosis",
+    "name": "Multiple Sclerosis",
+    "keywords": [
+      "difficulty walking",
+      "fatigue",
+      "learning and planning",
+      "muscle weakness",
+      "numbness",
+      "problems with thinking",
+      "vision problems"
+    ],
+    "summary": "This may indicate Multiple Sclerosis (MS). It's a neurological disease that affects the central nervous system.",
+    "careLevel": "primary_care",
+    "careLevelLabel": "Primary care or telehealth",
+    "rationale": "Neurological symptoms without acute red flags warrant a scheduled neurology workup."
+  }
+]

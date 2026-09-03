@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareCompass — A Care Navigation Decision-Support Prototype</title>
+<meta name="description" content="A symptom-to-care-pathway decision-support prototype exploring how health systems route patients to the right level of care — self-care, primary care, urgent care, or emergency.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#top">🧭 CareCompass</a>
+    <nav class="topnav">
+      <a href="#problem">Problem</a>
+      <a href="#approach">Approach</a>
+      <a href="#demo">Demo</a>
+      <a href="#framework">Framework</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#limitations">Limitations</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn--ghost btn--sm" href="https://github.com/devashreeshukla96/SymptomChecker" target="_blank" rel="noopener">Source</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Healthcare strategy &amp; operations · Product case study</p>
+      <h1>Helping patients find the <em>right</em> level of care — not just an answer.</h1>
+      <p class="lede">
+        CareCompass is a working prototype of a care-navigation tool: a patient describes their symptoms,
+        and the tool suggests likely conditions <strong>and</strong> the care setting that fits them —
+        self-care, primary care, urgent care, or emergency. The interesting problem here isn't the matching
+        algorithm; it's the operational one underneath it: how do you route people to appropriate,
+        lower-cost, faster care without creating clinical risk?
+      </p>
+      <div class="hero__ctas">
+        <a href="#demo" class="btn btn--primary">Try the interactive demo</a>
+        <a href="#framework" class="btn btn--ghost">See the care-pathway framework</a>
+      </div>
+      <p class="disclaimer-chip">⚠️ Educational prototype only — not a diagnostic tool and not a substitute for medical advice. If you are experiencing a medical emergency, call your local emergency number.</p>
+    </div>
+  </section>
+
+  <section id="problem" class="section">
+    <div class="wrap">
+      <h2><span class="num">01</span> The operational problem</h2>
+      <div class="grid grid--2">
+        <div>
+          <p>
+            Most patients don't have a good mental model of where to go for care. Mild symptoms end up
+            in emergency departments; genuinely urgent symptoms get delayed by a slow primary-care
+            scheduling process. Neither outcome is good — for the patient, or for the system absorbing
+            the cost of a mismatch.
+          </p>
+          <p>
+            Industry analyses (including a widely cited 2019 UnitedHealth Group study) have estimated that
+            a meaningful share of emergency-department visits — often cited in the range of a quarter —
+            involve conditions that could reasonably have been treated in urgent care or a retail clinic
+            at a fraction of the cost. Whatever the precise number in a given system, the pattern shows up
+            in almost every health system's utilization data: <strong>acuity and setting are frequently
+            mismatched</strong>, and it's rarely due to patients being careless — it's because the health
+            system doesn't give them a good way to self-triage.
+          </p>
+        </div>
+        <div class="callout">
+          <h3>Why this matters for strategy &amp; ops, not just clinical teams</h3>
+          <ul>
+            <li>ED overutilization drives avoidable cost and crowds capacity needed for true emergencies.</li>
+            <li>Under-triage (staying home with something serious) drives delayed diagnosis and worse outcomes.</li>
+            <li>A "digital front door" that routes well is a lever for cost, access, and satisfaction at once — which is exactly why health systems and payers keep building these tools.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="section section--alt">
+    <div class="wrap">
+      <h2><span class="num">02</span> The approach — and a deliberate simplification</h2>
+      <p class="section-lede">
+        This prototype intentionally does <strong>not</strong> use a black-box machine learning model to
+        make the triage call. That's a design decision, not a limitation I ran out of time to fix.
+      </p>
+      <div class="grid grid--3">
+        <div class="card">
+          <h3>1. Symptom matching</h3>
+          <p>The demo matches free-text symptom descriptions against a library of documented symptom
+          patterns for 66 conditions, entirely in the browser — nothing is sent to a server.</p>
+        </div>
+        <div class="card">
+          <h3>2. Care-pathway taxonomy</h3>
+          <p>Every condition is pre-classified into one of four care tiers by triage logic that a clinical
+          operations team would sign off on — not inferred by a model at run time.</p>
+        </div>
+        <div class="card">
+          <h3>3. Safety-first override</h3>
+          <p>Red-flag symptoms (chest pain, stroke signs, severe bleeding) short-circuit the whole matcher
+          and immediately recommend emergency care, regardless of what else was typed.</p>
+        </div>
+      </div>
+      <p class="section-note">
+        <strong>Why keep it this simple?</strong> Because in a real deployment, the hard part isn't building
+        a classifier — it's building something a clinical governance committee, a legal team, and a
+        skeptical clinician can all audit and trust. A rule-based system where every recommendation traces
+        back to an explicit, reviewable decision is a more honest starting point for that conversation than
+        a model that's more "accurate" on paper but can't explain itself. Explainability and auditability
+        are themselves operational requirements, not just engineering nice-to-haves.
+      </p>
+    </div>
+  </section>
+
+  <section id="demo" class="section">
+    <div class="wrap">
+      <h2><span class="num">03</span> Try the demo</h2>
+      <p class="section-lede">Describe symptoms in plain language, or tap an example. This runs entirely in your browser.</p>
+
+      <div class="demo">
+        <div class="demo__redflags">
+          <p class="demo__redflags-label">First — any of these right now?</p>
+          <div class="chip-row" id="redflag-chips">
+            <label class="chip chip--check"><input type="checkbox" data-flag="chest"> Severe chest pain / pressure</label>
+            <label class="chip chip--check"><input type="checkbox" data-flag="breathing"> Serious trouble breathing</label>
+            <label class="chip chip--check"><input type="checkbox" data-flag="stroke"> Sudden one-sided weakness or slurred speech</label>
+            <label class="chip chip--check"><input type="checkbox" data-flag="bleeding"> Uncontrolled bleeding or loss of consciousness</label>
+          </div>
+        </div>
+
+        <div id="emergency-banner" class="emergency-banner" hidden>
+          🚨 Based on what you selected, this could be a medical emergency. <strong>Call your local emergency
+          number (911 in the US) or go to the nearest emergency department now.</strong> Do not wait for a
+          symptom-checker result.
+        </div>
+
+        <div class="demo__input-row">
+          <input type="text" id="symptom-input" placeholder="e.g. runny nose, cough, tired" autocomplete="off">
+          <button id="check-btn" class="btn btn--primary">Check</button>
+        </div>
+
+        <div class="chip-row" id="example-chips">
+          <button class="chip" data-example="cold, cough, tiredness">Common cold</button>
+          <button class="chip" data-example="painful urination, frequent urination">UTI symptoms</button>
+          <button class="chip" data-example="sudden and severe joint pain, swelling, redness">Sudden joint pain</button>
+          <button class="chip" data-example="severe headache, nausea, sensitivity to light and sound">Migraine</button>
+          <button class="chip" data-example="shortness of breath, wheezing, chest tightness">Breathing trouble</button>
+        </div>
+
+        <div id="results" class="results" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="framework" class="section section--alt">
+    <div class="wrap">
+      <h2><span class="num">04</span> The care-pathway framework</h2>
+      <p class="section-lede">Every condition in this prototype maps to one of four tiers. This taxonomy — not the text matching — is the actual design artifact.</p>
+      <div class="grid grid--4 tiers">
+        <div class="tier tier--self">
+          <span class="tier__badge">Self-care</span>
+          <p class="tier__desc">Monitor at home. Mild, self-limiting symptoms.</p>
+          <p class="tier__meta">Target: no visit needed</p>
+          <p class="tier__example">e.g. common cold, mild allergies, acne</p>
+        </div>
+        <div class="tier tier--primary">
+          <span class="tier__badge">Primary care / telehealth</span>
+          <p class="tier__desc">Non-urgent, but needs a clinician and likely labs or a treatment plan.</p>
+          <p class="tier__meta">Target: within days</p>
+          <p class="tier__example">e.g. hypertension follow-up, hypothyroidism, chronic joint pain</p>
+        </div>
+        <div class="tier tier--urgent">
+          <span class="tier__badge">Urgent care</span>
+          <p class="tier__desc">Needs in-person evaluation soon, but isn't immediately life-threatening.</p>
+          <p class="tier__meta">Target: same day</p>
+          <p class="tier__example">e.g. gout flare, suspected UTI complication, dehydration</p>
+        </div>
+        <div class="tier tier--emergency">
+          <span class="tier__badge">Emergency</span>
+          <p class="tier__desc">Potentially life-threatening. Call emergency services immediately.</p>
+          <p class="tier__meta">Target: now</p>
+          <p class="tier__example">e.g. heart attack, stroke signs, pancreatitis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="metrics" class="section">
+    <div class="wrap">
+      <h2><span class="num">05</span> How you'd know this was working</h2>
+      <p class="section-lede">If this shipped inside a real health system, a strategy/ops team wouldn't measure "accuracy" in isolation — they'd track the operational and safety outcomes that justify the investment.</p>
+      <div class="grid grid--3 metric-cards">
+        <div class="metric-card">
+          <h3>ED diversion rate</h3>
+          <p>% of users who would default to the ED but are appropriately routed to a lower-acuity setting instead.</p>
+        </div>
+        <div class="metric-card">
+          <h3>Under-triage / miss rate</h3>
+          <p>% of emergent presentations <em>not</em> flagged as emergency — the single most important safety metric, and the one you optimize hardest against, even at the cost of over-flagging.</p>
+        </div>
+        <div class="metric-card">
+          <h3>Time-to-appropriate-care</h3>
+          <p>Elapsed time from symptom onset to reaching the recommended setting, vs. a baseline without the tool.</p>
+        </div>
+        <div class="metric-card">
+          <h3>Follow-through rate</h3>
+          <p>% of users who actually book/attend the recommended setting rather than abandoning the flow.</p>
+        </div>
+        <div class="metric-card">
+          <h3>Cost per avoided ED visit</h3>
+          <p>Blended savings from successful diversions, net of the tool's operating cost and any redirected-but-should-have-gone cases.</p>
+        </div>
+        <div class="metric-card">
+          <h3>Equity of routing</h3>
+          <p>Whether recommendation quality and follow-through hold steady across language, income, and access-to-transport segments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="limitations" class="section section--alt">
+    <div class="wrap">
+      <h2><span class="num">06</span> Limitations &amp; responsible design</h2>
+      <div class="grid grid--2">
+        <ul class="check-list">
+          <li>This is <strong>not a diagnostic device</strong> and has not been through any clinical validation, IRB review, or regulatory process a real product would require.</li>
+          <li>The condition list (66 entries) and care-tier mapping were built by hand for this prototype — they are illustrative of the <em>approach</em>, not a clinically vetted taxonomy.</li>
+          <li>Symptom matching is simple keyword overlap. It does not account for symptom severity, duration, patient history, age, or comorbidities — all of which change real triage decisions.</li>
+        </ul>
+        <ul class="check-list">
+          <li>No accommodation yet for pediatric or geriatric presentations, which often differ meaningfully from the adult-symptom patterns used here.</li>
+          <li>A real version would need a named clinical governance owner, a defined liability and escalation path, and an explicit plan for the false-negative case — someone who needed emergency care and wasn't told so.</li>
+          <li>Runs entirely client-side by design: no symptom data is transmitted or stored anywhere. A production version handling real patient data would need a full privacy and security review.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap" class="section">
+    <div class="wrap">
+      <h2><span class="num">07</span> What I'd do next with real resources</h2>
+      <ol class="roadmap">
+        <li><strong>Validate the taxonomy.</strong> Sit down with a clinical advisor (nurse triage lead or ED physician) and pressure-test every self-care and primary-care classification — those are the ones with the most room for error.</li>
+        <li><strong>Calibrate against real utilization data.</strong> Compare recommended pathways against actual historical visit outcomes to estimate a realistic diversion rate before ever touting one.</li>
+        <li><strong>Design for the miss case.</strong> Build an explicit "if unsure, escalate" bias into the logic, and instrument it so under-triage events are reviewable after the fact.</li>
+        <li><strong>Make it a conversation, not a form.</strong> Real triage lines ask follow-up questions (duration, severity, associated symptoms) rather than taking one input and returning a list.</li>
+        <li><strong>Integrate with the actual next step.</strong> Connect the recommended pathway to a real provider directory, telehealth booking flow, or nurse line — the recommendation is only useful if it's actionable.</li>
+        <li><strong>Test for equity, not just accuracy.</strong> Run the tool against symptom phrasing that varies by language proficiency and health literacy, and measure whether quality holds up.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about" class="section section--alt">
+    <div class="wrap">
+      <h2><span class="num">08</span> About this project</h2>
+      <p>
+        This project started from an open-source NLP symptom-checker template (a Flask app backed by an
+        LSTM intent classifier — you can still find that original prototype in
+        <code>/legacy-prototype</code> in the repo). I redesigned it into this case study to make a
+        different point: the hard, interesting problem in this space isn't the model, it's the care-pathway
+        design and the operational judgment behind it — which is the lens I want to bring to healthcare
+        strategy and operations work.
+      </p>
+      <p>
+        Everything on this page — the care-pathway taxonomy, the safety-override logic, the framing of the
+        problem in operational terms — was built for this reframing. The interactive demo runs entirely as
+        static HTML/CSS/JavaScript, hosted on GitHub Pages, with the condition data compiled from the
+        original project's dataset.
+      </p>
+      <p>
+        <a class="btn btn--ghost" href="https://github.com/devashreeshukla96/SymptomChecker" target="_blank" rel="noopener">View the full source on GitHub →</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="year"></span> Devashree Shukla. Educational prototype — not medical advice. MIT licensed.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

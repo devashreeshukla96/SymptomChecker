@@ -1,86 +1,68 @@
+# CareCompass — A Care Navigation Decision-Support Prototype
 
-# Symptom Checker Chatbot AI
+**Live demo:** https://devashreeshukla96.github.io/SymptomChecker/
 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A simple chatbot that can help users check their symptoms and provide relevant information. This chatbot uses natural language processing (NLP) techniques and a recurrent neural network (RNN) model to understand user queries and respond accordingly.
+CareCompass is a case-study prototype for a problem healthcare strategy and operations teams
+spend a lot of time on: **patients don't reliably know where to seek care.** Mild symptoms end
+up in the emergency department; genuinely urgent symptoms get delayed by slow scheduling. Neither
+is good for the patient or for the system absorbing the cost of the mismatch.
 
-## Table of Contents
+The prototype takes a plain-language symptom description and suggests both likely conditions and
+a **recommended care setting** — self-care, primary care/telehealth, urgent care, or emergency —
+along with a one-line rationale for that recommendation. The full write-up (problem framing,
+design rationale, care-pathway taxonomy, success metrics, limitations, and roadmap) lives on the
+[live site](https://devashreeshukla96.github.io/SymptomChecker/) — this README covers the
+technical side.
 
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Training](#training)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#Contact)
+## What this project is actually about
 
-## Introduction
+The interesting part of this project isn't the symptom-matching logic — it's deliberately simple
+(client-side keyword matching, no ML). The interesting part is the **care-pathway taxonomy**:
+mapping 66 conditions to an operational triage tier, with an explicit safety-first override for
+red-flag symptoms, and thinking through what a real deployment would need (clinical governance,
+an under-triage/miss-rate metric, equity testing, integration with a real provider directory).
+That's the systems-thinking exercise this repo is meant to demonstrate.
 
-This repository contains code for a symptom checker chatbot. The chatbot can engage in conversations with users, gather information about their symptoms, and provide information about potential conditions or nearby medical centers. It uses a pre-trained RNN model for natural language understanding.
-
-## Getting Started
-
-To get started with the Symptom Checker Chatbot, follow these steps:
-
-1. Clone the repository to your local machine:
-
-   ```
-   git clone https://github.com/your-username/symptom-checker-chatbot.git
-   ```
-
-2. Install the required dependencies:
-
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Download the necessary data files and place them in the appropriate directories:
-   - `intents.json`: Contains predefined intents for the chatbot.
-   - `data_rnn.pth`: Pre-trained RNN model for natural language understanding.
-   - `medical_centers.json`: Data file containing information about medical centers.
-
-## Usage
-
-To use the Symptom Checker Chatbot, run the `app.py` file:
+## Repository structure
 
 ```
-python app.py
+index.html                 Live site: case study + interactive demo
+assets/
+  style.css                Styling
+  app.js                   Client-side symptom matcher + UI logic
+  data/conditions.json     66 conditions, each tagged with a care-pathway tier and rationale
+docs/
+  interview-prep.md        Study notes: likely questions, talking points, glossary
+  project-brief.md         One-page cheat sheet
+legacy-prototype/          The original Flask + PyTorch/LSTM chatbot this project evolved from
 ```
 
-This will start a Flask web application that you can interact with. Visit the URL `http://localhost:5000` in your web browser to access the chat interface.
+## Running the live site locally
 
-## Training
+No build step or dependencies — it's static HTML/CSS/JS.
 
-If you want to retrain the RNN model or modify the chatbot's behavior, follow these steps:
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
 
-1. Modify the intents and patterns in `intents.json` to customize the chatbot's responses.
+Everything runs client-side; no data is sent to a server.
 
-2. Run the training script to retrain the RNN model:
+## About `legacy-prototype/`
 
-   ```
-   python train.py
-   ```
+This project started from an open-source NLP symptom-checker template: a Flask app backed by an
+LSTM intent classifier (PyTorch), with a hardcoded list of hospitals for a location-lookup
+feature. That original implementation is preserved in [`legacy-prototype/`](legacy-prototype/)
+for reference. It has its own `requirements.txt` and is not required to run the live site above.
 
-3. Save the trained model with a new filename and update the `FILE` variable in `chat.py` with the new filename.
-
-## Dependencies
-
-The Symptom Checker Chatbot relies on the following dependencies:
-
-- Python 3.x
-- PyTorch
-- Flask
-- NLTK
-- geocoder
-
-You can install these dependencies using the provided `requirements.txt` file.
-
-## Contributing
-
-If you'd like to contribute to this project, feel free to fork the repository and submit pull requests. Contributions are welcome, whether it's bug fixes, feature enhancements, or documentation improvements.
+I rebuilt the project from that starting point into the static case study in this repo because the
+original implementation optimized for the wrong thing for what I wanted to show: a from-scratch
+RNN classifier demonstrates ML engineering, not the operational/strategic judgment involved in
+designing a care-navigation product. The redesign — the care-pathway taxonomy, the safety-override
+logic, and the accompanying write-up — is original to this version.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT — see [LICENSE](LICENSE).
